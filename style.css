@@ -38,20 +38,91 @@ section {
   line-height: 30px;
   font-weight: normal;
 }
+@media (max-width: 768px) {
+  .header__title {
+    padding: 0 15px;
+  }
+}
 .header__image {
   background-image: url(img/background-header.png);
-  width: 960px;
+  max-width: 960px;
   height: 400px;
   margin: auto;
   position: relative;
 }
+@media (max-width: 768px) {
+  .header__image {
+    background-image: url(img/main-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 170px;
+  }
+}
+@media (max-width: 768px) {
+  .header__image-item {
+    display: none;
+  }
+}
 .header__image-item1 {
+  background-image: url(img/bosch.png);
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 168px;
+  height: 190px;
   top: 135px;
   left: 35px;
+  -webkit-animation: opacityy 3s infinite;
+  -moz-animation: opacityy 3s infinite;
+  animation: opacityy 3s infinite;
+}
+@-moz-keyframes opacityy {
+  0% {
+    background-image: url(img/bosch.png);
+  }
+  50% {
+    background-image: none;
+  }
+  75% {
+    background-image: url(img/toothbrush.png);
+  }
+  100% {
+    background-image: none;
+  }
+}
+@-webkit-keyframes opacityy {
+  0% {
+    background-image: url(img/bosch.png);
+  }
+  50% {
+    background-image: none;
+  }
+  75% {
+    background-image: url(img/toothbrush.png);
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes opacityy {
+  0% {
+    background-image: url(img/bosch.png);
+  }
+  50% {
+    background-image: none;
+  }
+  75% {
+    background-image: url(img/toothbrush.png);
+  }
+  100% {
+    background-image: none;
+  }
 }
 .header__image-item2 {
+  background-image: url(img/teapot.png);
   position: absolute;
+  width: 193px;
+  height: 231px;
   top: 119px;
   left: 162px;
   -webkit-animation: scaling 3s steps(1) infinite;
@@ -101,12 +172,18 @@ section {
   }
 }
 .header__image-item3 {
+  background-image: url(img/bag.png);
   position: absolute;
+  width: 368px;
+  height: 364px;
   top: 35px;
   left: 27%;
 }
 .header__image-item4 {
+  background-image: url(img/toy.png);
   position: absolute;
+  width: 236px;
+  height: 205px;
   top: 109px;
   right: 114px;
   -webkit-animation: rotating 3s linear infinite;
@@ -121,7 +198,7 @@ section {
     transform: rotate(35deg);
   }
   50% {
-    transform: rotate(-25deg);
+    transform: rotate(-35deg);
   }
   100% {
     transform: rotate(0deg);
@@ -135,7 +212,7 @@ section {
     transform: rotate(35deg);
   }
   50% {
-    transform: rotate(-25deg);
+    transform: rotate(-35deg);
   }
   100% {
     transform: rotate(0deg);
@@ -149,20 +226,75 @@ section {
     transform: rotate(35deg);
   }
   50% {
-    transform: rotate(-25deg);
+    transform: rotate(-35deg);
   }
   100% {
     transform: rotate(0deg);
   }
 }
 .header__image-item5 {
+  background-image: url(img/toothbrush.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   position: absolute;
-  top: 105px;
-  right: 55px;
+  width: 168px;
+  height: 190px;
+  top: 118px;
+  right: -20px;
+  -webkit-animation: opacity1 3s infinite;
+  -moz-animation: opacity1 3s infinite;
+  animation: opacity1 3s infinite;
+}
+@-moz-keyframes opacity1 {
+  0% {
+    background-image: url(img/toothbrush.png);
+  }
+  50% {
+    background-image: none;
+  }
+  75% {
+    background-image: url(img/bosch.png);
+  }
+  100% {
+    background-image: none;
+  }
+}
+@-webkit-keyframes opacity1 {
+  0% {
+    background-image: url(img/toothbrush.png);
+  }
+  50% {
+    background-image: none;
+  }
+  75% {
+    background-image: url(img/bosch.png);
+  }
+  100% {
+    background-image: none;
+  }
+}
+@keyframes opacity1 {
+  0% {
+    background-image: url(img/toothbrush.png);
+  }
+  50% {
+    background-image: none;
+  }
+  75% {
+    background-image: url(img/bosch.png);
+  }
+  100% {
+    background-image: none;
+  }
 }
 .header__social {
   float: right;
   margin: 12px 5px 75px 0;
+}
+@media (max-width: 768px) {
+  .header__social {
+    margin-bottom: 20px;
+  }
 }
 .header__social-item {
   width: 32px;
@@ -188,6 +320,11 @@ section {
 .info__text {
   margin-bottom: 45px;
 }
+@media (max-width: 768px) {
+  .info__text {
+    padding: 0 15px;
+  }
+}
 .info__text:last-child {
   margin-bottom: 0;
 }
@@ -209,9 +346,24 @@ section {
   padding-top: 65px;
 }
 .product-block__foto {
-  display: inline-block;
   width: 265px;
   text-align: center;
+}
+@media (min-width: 769px) {
+  .product-block__foto {
+    float: left;
+  }
+}
+@media (max-width: 768px) {
+  .product-block__foto {
+    margin: 20px auto;
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .product-block__foto:nth-of-type(4n) {
+    float: right;
+  }
 }
 .product-block__foto figure {
   margin: 0;
@@ -236,9 +388,16 @@ section {
 .product-block__description {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   width: calc(100% - 270px);
   padding-left: 50px;
   padding-top: 50px;
+}
+@media (max-width: 768px) {
+  .product-block__description {
+    width: 100%;
+    padding: 0 15px 0 50px;
+  }
 }
 .product-block__description-link {
   color: #0c77b5;
@@ -355,13 +514,24 @@ section {
   padding-top: 3px;
   font-size: 16px;
 }
+.pets {
+  font-size: 0;
+}
 .pets__item {
   border-right: 1px solid #000;
-  width: 32%;
+  width: 33.33%;
   display: inline-block;
   vertical-align: top;
   min-height: 612px;
   padding-left: 15px;
+}
+@media (max-width: 768px) {
+  .pets__item {
+    width: 100%;
+    padding: 0 15px;
+    border-right: none;
+    min-height: 300px;
+  }
 }
 .pets__item:last-child {
   border: none;
@@ -370,6 +540,11 @@ section {
   text-align: center;
   height: 280px;
   width: 210px;
+}
+@media (max-width: 768px) {
+  .pets__foto {
+    margin: auto;
+  }
 }
 .pets__foto figure {
   margin: 0;
@@ -399,6 +574,14 @@ section {
   padding-top: 50px;
   width: 96%;
 }
+@media (max-width: 768px) {
+  .pets__description {
+    padding: 0 0 0 40px;
+  }
+}
+.pets__description-text {
+  font-size: 16px;
+}
 .pets__description-link {
   color: #0c77b5;
   font-size: 18px;
@@ -412,6 +595,12 @@ section {
   height: 30px;
   left: 0;
   top: 15px;
+}
+@media (max-width: 768px) {
+  .pets__description-link:before {
+    left: 0;
+    top: 0;
+  }
 }
 .pets__description-link-i10:before {
   content: "10.";
@@ -441,6 +630,13 @@ section {
   min-height: 500px;
   padding-left: 15px;
   margin-right: 7%;
+}
+@media (max-width: 768px) {
+  .beauty__item {
+    width: 100%;
+    padding: 0 15px;
+    margin-right: 0;
+  }
 }
 .beauty__item:last-child {
   margin-right: 0;
@@ -477,6 +673,11 @@ section {
   padding-top: 50px;
   width: 96%;
 }
+@media (max-width: 768px) {
+  .beauty__description {
+    padding: 0 0 0 40px;
+  }
+}
 .beauty__description-link {
   color: #0c77b5;
   font-size: 18px;
@@ -490,6 +691,12 @@ section {
   height: 30px;
   left: 0;
   top: 15px;
+}
+@media (max-width: 768px) {
+  .beauty__description-link:before {
+    left: 0;
+    top: 0;
+  }
 }
 .beauty__description-link-i19:before {
   content: "19.";
@@ -546,12 +753,24 @@ section {
   margin-bottom: 30px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .footer-block {
+    background-size: contain;
+    margin-top: 20px;
+  }
+}
 .footer-block__text {
-  width: 475px;
+  max-width: 475px;
   text-align: center;
   color: #fff;
   margin: auto;
   padding-top: 7px;
+}
+@media (max-width: 768px) {
+  .footer-block__text {
+    padding: 1px 60px 0 60px;
+    font-size: 12px;
+  }
 }
 .footer-block__text-link {
   color: #0c77b5;
